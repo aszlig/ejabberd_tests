@@ -39,8 +39,8 @@
 %{suites, "tests", sm_SUITE}.
 %{suites, "tests", system_monitor_SUITE}.
 %{suites, "tests", users_api_SUITE}.
-%{suites, "tests", vcard_simple_SUITE}.
-%{groups, "tests", vcard_SUITE, [ro_full]}.
+{suites, "tests", vcard_simple_SUITE}.
+%{groups, "tests", vcard_SUITE, [ro_full, ro_limited]}.
 {suites, "tests", vcard_SUITE}.
 %{suites, "tests", websockets_SUITE}.
 {config, ["test.config", "vcard.config"]}.
