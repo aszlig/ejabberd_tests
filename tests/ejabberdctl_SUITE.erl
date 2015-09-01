@@ -381,7 +381,7 @@ rosteritem_rw(Config) ->
                 {_, 0} = ejabberdctl("add_rosteritem", [AliceName, Domain, BobName,
                                                         Domain, "MyBob", "MyGroup", "both"], Config),
                 {_, 0} = ejabberdctl("add_rosteritem", [AliceName, Domain, MikeName,
-                                                        Domain, "MyMike", "MyGroup", "both"], Config),
+                                                        Domain, "\"My Mike\"", "\'My Group\'", "both"], Config),
 
                 [Push1, Push2] = escalus:wait_for_stanzas(Alice, 2), % Check roster broadcasts
                 escalus:assert(is_roster_set, Push1),
